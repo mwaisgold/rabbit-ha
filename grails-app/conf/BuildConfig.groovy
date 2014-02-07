@@ -26,7 +26,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
         // runtime 'mysql:mysql-connector-java:5.1.5'
-        runtime 'com.rabbitmq:amqp-client:2.8.2'
+        runtime 'com.rabbitmq:amqp-client:3.2.3'
     }
 
     plugins {

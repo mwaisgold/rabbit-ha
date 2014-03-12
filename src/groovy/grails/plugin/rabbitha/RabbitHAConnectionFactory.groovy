@@ -42,7 +42,7 @@ class RabbitHAConnectionFactory {
 				connection = connectionFactory.newConnection(address)
 				log.info "Succesfully connected to $address for queue $queueName"
 
-				map[queueName] = connection
+				map[clusterIdx + queueName] = connection
 			}
 		}
 

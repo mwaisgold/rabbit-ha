@@ -51,9 +51,10 @@ class RabbitHAConsumerWorker implements Runnable {
             channel.queueDeclare(queueName, true, false, false, null)
         }
 
+        channel.basicQos(prefetchCount)
         consumer = new QueueingConsumer(channel)
         channel.basicConsume(queueName, false, consumer)
-        channel.basicQos(prefetchCount)
+        
     }
 
     void run() {
